@@ -10,6 +10,8 @@ let secondary = document.querySelector('#secondary');
 let warning = document.querySelector('#warning');
 let success = document.querySelector('#success');
 
+let need_color_default_title = need_color_title.textContent;
+
 // Onload -- the follwoing commands load with the page
 greeting.textContent = `Hello there ${localStorage.getItem('name') === null ? "Stranger" : localStorage.getItem('name') }!`;
 
@@ -26,18 +28,22 @@ forget.onclick = () => {
 
 primary.onclick = () => {
     need_color.setAttribute('class', 'bg-primary text-white');
+    need_color_title.textContent = need_color_default_title;
 }
 
 secondary.onclick = () => {
     need_color.setAttribute('class', 'bg-secondary text-white');
+    need_color_title.textContent = need_color_default_title;
 }
 
 warning.onclick = () => {
     need_color.setAttribute('class', 'bg-warning');
+    need_color_title.textContent = need_color_default_title;
 }
 
 success.onclick = () => {
     need_color.setAttribute('class', 'bg-success text-white');
+    need_color_default_title = need_color_title.textContent;
     need_color_title.textContent = "Ah! Success is better, Thank You! 😀";
 }
 
