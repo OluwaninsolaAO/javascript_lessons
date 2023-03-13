@@ -43,7 +43,6 @@ warning.onclick = () => {
 
 success.onclick = () => {
     need_color.setAttribute('class', 'bg-success text-white');
-    need_color_default_title = need_color_title.textContent;
     need_color_title.textContent = "Ah! Success is better, Thank You! 😀";
 }
 
